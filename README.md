@@ -1,5 +1,19 @@
 # Quantum Cryptography & Security
+Analysis and results of laboratory experiments for the 'Quantum Cryptography and Security' course (AY 2023/24). <br>
+This repository is organized into three folders, one for each experiment: *Quantum Random Numbers Generation*, *Error Correction*, and *Quantum Key Distribution*. Each folder has a <code> functions.py </code> file with the analysis, a folder with the graphs, and the final report. 
 
+## Introductions
+### Quantum Random Numbers Generation
+The implementation of QRNG can be characterized by the degree of trust in the different elements of the protocol. The simplest case is the *trusted setup*, in which all the elements are supposed to be controlled and uncorrelated with the environment. We can relax this hypothesis and consider *semi-Device-Independent* setups with uncharacterized sources or measurements. <br> 
+In this experiment, we use the phenomenon known as *spontaneous parametric downconversion* to generate a two-photon entangled state and characterize it in terms of polarization. The security analysis is based on the *leftover hash lemma* with bounds on the min-entropy based on either the state tomography or the entropic uncertainty principle. 
+
+### Error correction
+To reconcile the keys, Alice and Bob need to cooperate over a classic public channel. In this report, we describe three different protocols: *Cascade* (based on parity comparison and iterative binary search), *Winnow* (based on parity comparison and syndrome decoding), and the *LDPC codes* (with rate modulation via puncturing and shortening). <br>
+We compare the performances in terms of two efficiency metrics based on the error correction capability and the *Slepian-Wolf bound*.
+
+### Quantum Key Distribution
+The standard QKD protocols are designed to work with true single-photons. However, such experimental setups are still unavailable for practical implementation, and weak coherent laser pulses (vulnerable to the so-called *photon number splitting* attack) are used instead. <br>
+In this report, we will introduce and analyze a *3-states 1-decoy* QKD protocol, evaluating the security of the obtained keys in the finite scenario. Such methods provide robust protocols to overcome the limitations of the multi-photon events and the finite keys.
 
 ## References
 ### QRNG
